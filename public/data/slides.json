@@ -1,0 +1,62 @@
+{
+	"slides": [
+		{
+			"heading": "Slide 1",
+			"bullets": [
+				"Bullet 1",
+				"bullet 2",
+				"bullet 3"
+			],
+			"code": {
+				"type": "css",
+				"content": ".selector {\n    display: block;\n}"
+			}
+		},
+		{
+			"heading": "Slide 2",
+			"bullets": [
+				"Bullet 1",
+				"bullet 2",
+				"bullet 3",
+				"Bullet 1",
+				"bullet 2"
+			],
+			"code": {
+				"type": "css",
+				"content": ".selector {\n    display: block;\n}"
+			}
+		},
+		{
+			"heading": "Slide 3",
+			"bullets": [
+				"some stuff",
+				"fatties 2",
+				"bullet 3"
+			],
+			"code": {
+				"type": "javascript",
+				"content": "alert(\"String\")"
+			}
+		},
+		{
+			"heading": "Another Slide",
+			"bullets": [
+				"More stuff",
+				"css is crummy",
+				"some more stuff"
+			],
+			"code": {
+				"type": "scss",
+				"content": ".redBg {\n   background-color: red;\n   border-radius: 51px;\n   color: white;\n   padding: 5px;\n}"
+			}
+		},
+		{
+			"heading": "blank slide",
+			"bullets": [],
+			"code": {
+				"type": "css",
+				"content": ".thingy {color: #333;}"
+			}
+		}
+	]
+}

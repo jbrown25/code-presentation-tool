@@ -1,0 +1,96 @@
+//loading
+.inactive{
+	display: none;
+}
+
+.inactive.animated {
+	display: block;
+
+	&.animate-left {
+		-webkit-transform-origin: 0% 50%;
+		transform-origin: 0% 50%;
+		-webkit-animation: rotatePushLeft .8s both ease;
+		animation: rotatePushLeft .8s both ease;
+	}
+
+	&.animate-right {
+		-webkit-transform-origin: 100% 50%;
+		transform-origin: 100% 50%;
+		-webkit-animation: rotatePushRight .8s both ease;
+		animation: rotatePushRight .8s both ease;
+	}
+
+	&.animate-top {
+		-webkit-transform-origin: 50% 0%;
+		transform-origin: 50% 0%;
+		-webkit-animation: rotatePushTop .8s both ease;
+		animation: rotatePushTop .8s both ease;
+	}
+
+	&.animate-bottom {
+		-webkit-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+		-webkit-animation: rotatePushBottom .8s both ease;
+		animation: rotatePushBottom .8s both ease;
+	}
+}
+
+.active.animated {
+	&.animate-left {
+		-webkit-animation: moveFromRight .6s ease both;
+		animation: moveFromRight .6s ease both;
+	}
+
+	&.animate-right {
+		-webkit-animation: moveFromLeft .6s ease both;
+		animation: moveFromLeft .6s ease both;
+	}
+
+	&.animate-top {
+		-webkit-animation: moveFromBottom .6s ease both;
+		animation: moveFromBottom .6s ease both;
+	}
+
+	&.animate-bottom {
+		-webkit-animation: moveFromTop .6s ease both;
+		animation: moveFromTop .6s ease both;
+	}	
+}
+
+
+
+@keyframes rotatePushLeft {
+	from { }
+	to { opacity: 0; -webkit-transform: rotateY(90deg); transform: rotateY(90deg); }
+}
+
+@keyframes rotatePushRight {
+	from { }
+	to { opacity: 0; -webkit-transform: rotateY(-90deg); transform: rotateY(-90deg); }
+}
+
+@keyframes rotatePushTop {
+	from { }
+	to { opacity: 0; -webkit-transform: rotateX(-90deg); transform: rotateX(-90deg); }
+}
+
+@keyframes rotatePushBottom {
+	from { }
+	to { opacity: 0; -webkit-transform: rotateX(90deg); transform: rotateX(90deg); }
+}
+
+@keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+@keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@keyframes moveFromTop {
+	from { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
