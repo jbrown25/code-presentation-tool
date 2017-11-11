@@ -57,6 +57,16 @@
 				"type": "css",
 				"content": ".thingy {color: #333;}"
 			}
+		},
+		{
+			"heading": "some stuff",
+			"bullets": [
+
+			],
+			"code": {
+				"type": "javascript",
+				"content": "const thingy = () => {\n   alert('thingy');\n};"
+			}
 		}
 	]
 }

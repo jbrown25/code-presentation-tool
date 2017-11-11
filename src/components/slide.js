@@ -68,6 +68,29 @@ export default class Slide extends Component {
 		//no slide yet
 		if(!this.props.slide) return <div className="no-slide">...loading</div>;
 
+		//get heading
+		const getHeading = () => {
+			if(this.props.slide.heading){
+				return (
+					<div className="text-center">
+						<h1>{this.props.slide.heading}</h1>
+					</div>
+				);
+			}
+		};
+
+		const getBullets = () => {
+			if(this.props.slide.bullets){
+				return (
+					<div className="bullet-container">
+						<ul>
+							{bulletItems}
+						</ul>
+					</div>
+				);
+			}
+		};
+
 		//render bullet list
 		const bulletItems = this.props.slide.bullets.map((bullet) => {
 			return (
@@ -75,8 +98,20 @@ export default class Slide extends Component {
 			);
 		});
 
+		const getCode = () => {
+			if(this.props.slide.code){
+				return (
+					<pre>
+						<code className={this.props.slide.code.type}>
+							{this.props.slide.code.content}
+						</code>
+					</pre>
+				);
+			}
+		};
+
 		//determine whether slide is active and get current animation
-		let getClasses = () => {
+		const getClasses = () => {
 			if(this.props.isActive) return `slide active ${this.props.animationClass} ${this.state.shouldAnimateClass}`;
 			return `slide inactive ${this.props.animationClass} ${this.state.shouldAnimateClass}`;
 		};
@@ -84,19 +119,9 @@ export default class Slide extends Component {
 		return (
 			<div className={getClasses()} style={{ backgroundColor: this.state.background }}>
 				<div className="slide-content">
-					<div className="text-center">
-						<h1>{this.props.slide.heading}</h1>
-					</div>
-					<div className="bullet-container">
-						<ul>
-							{bulletItems}
-						</ul>
-					</div>
-					<pre>
-						<code className={this.props.slide.code.type}>
-							{this.props.slide.code.content}
-						</code>
-					</pre>
+					{getHeading()}
+					{getBullets()}
+					{getCode()}
 				</div>
 				<div className="text-center button-container">
 			        <PreviousButton onPrev={() => this.props.onPrev()} />
