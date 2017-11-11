@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-babel",
+  "name": "code-presentation-tool",
   "version": "0.0.4",
-  "description": "React Webpack Babel Starter Kit",
+  "description": "Tool for presenting code slides",
   "main": "''",
   "scripts": {
     "build": "webpack --config webpack.production.config.js --progress --profile --colors",
@@ -12,11 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alicoding/react-webpack-babel"
+    "url": "https://github.com/jbrown25/code-presentation-tool"
   },
-  "author": "Ali Al Dallal",
+  "author": "Justin Brown",
   "license": "MIT",
-  "homepage": "https://github.com/alicoding/react-webpack-babel#readme",
+  "homepage": "https://github.com/jbrown25/code-presentation-tool#readme",
   "dependencies": {
     "node-sass": "^4.3.0",
     "react": "15.6.1",
