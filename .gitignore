@@ -29,5 +29,7 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
-# Ignore build files
-public
+todo.txt
+__mocks__
+src/__tests__
+CODE_OF_CONDUCT.md
