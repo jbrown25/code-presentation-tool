@@ -41,11 +41,7 @@ export default class Slide extends Component {
 		this.highlightCodeBlocks();
 	}
 
-	componentDidUpdate(){
-		this.highlightCodeBlocks();
-	}
-
-	//putting this in componentDidMount only doesn't seem to work if there's only one slide
+	//use highlight.js
 	highlightCodeBlocks(){
 		let slideCodes = document.getElementsByTagName('code');
 		for(let i = 0; i < slideCodes.length; i++){
@@ -92,14 +88,15 @@ export default class Slide extends Component {
 		};
 
 		//render bullet list
+		//setting html not dangerous if it's your own content
 		const bulletItems = this.props.slide.bullets.map((bullet) => {
 			return (
-				<li>{bullet}</li>
+				<li dangerouslySetInnerHTML={{__html: bullet}}></li>
 			);
 		});
 
 		const getCode = () => {
-			if(this.props.slide.code){
+			if (this.props.slide.code){
 				return (
 					<pre>
 						<code className={this.props.slide.code.type}>
