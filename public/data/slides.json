@@ -1,72 +1,102 @@
 {
 	"slides": [
 		{
-			"heading": "Slide 1",
+			"heading": "CSS Preprocessors",
 			"bullets": [
-				"Bullet 1",
-				"bullet 2",
-				"bullet 3"
+				"A CSS preprocessor is a tool that aids in writing CSS",
+				"CSS preprocessors have valuable features that can make your life easier",
+				"Learning CSS preprocessors is easy and requires little effort or time investment"
+			]
+		},
+		{
+			"heading": "First, some CSS",
+			"bullets": [
+				"CSS stands for Cascading Style Sheets",
+				"It’s a language that is used to determine how HTML elements are rendered on a screen",
+				"A CSS rule-set contains a selector and a block of declarations (declaration block)",
+				"The selector identifies the HTML elements subjected to the rules in the declaration block",
+				"A declaration is a key-value pair consisting of a property and a property value"
 			],
 			"code": {
 				"type": "css",
-				"content": ".selector {\n    display: block;\n}"
+				"content": ".red_button{\n   display: block;\n   background: red;\n   letter-spacing: 7px;\n   color: white;\n   padding: 12px 25px;\n}"
 			}
 		},
 		{
-			"heading": "Slide 2",
+			"heading": "CSS is good",
 			"bullets": [
-				"Bullet 1",
-				"bullet 2",
-				"bullet 3",
-				"Bullet 1",
-				"bullet 2"
+				"All of your rule-sets can go in one place and be applied to many pages.  You don’t need to write new rules for each new page (you used to have to do this)",
+				"CSS is very simple: basically just key-value pairs.  You can learn it in a very short period of time.  I’ve basically taught you CSS already.",
+				"It’s very powerful.  Web design is pretty much all CSS.  You can do cool things like drop shadows and animations."
 			],
 			"code": {
 				"type": "css",
-				"content": ".selector {\n    display: block;\n}"
+				"content": ".red_button{\n   display: block;\n   background: red;\n   letter-spacing: 7px;\n   color: white;\n   padding: 12px 25px;\n}"
 			}
 		},
 		{
-			"heading": "Slide 3",
+			"heading": "CSS is very bad",
 			"bullets": [
-				"some stuff",
-				"fatties 2",
-				"bullet 3"
-			],
-			"code": {
-				"type": "javascript",
-				"content": "alert(\"String\")"
-			}
+				"No variables.  If you use a color in many different elements, it must be entered in each rule-set.  If you change the color, it must be changed in each rule-set",
+				"No inheritance* or nesting.  A rule-set may logically be a subset of another and share some properties, but they exist independently of each other",
+				"Not modular.  Most of the time you will have one big stylesheet.",
+				"No functions or control structures.  Some exceptions, for example calc().  Media queries are a form of control structure."
+			]
 		},
 		{
-			"heading": "Another Slide",
+			"heading": "CSS Preprocessors",
 			"bullets": [
-				"More stuff",
-				"css is crummy",
-				"some more stuff"
+				"A CSS preprocessor is a program that allows you to write code that compiles down to CSS",
+				"Commonly used CSS preprocessors include Sass, LESS, and Stylus.",
+				"All have similar syntax and feature sets, but Sass is the most popular"
+			]
+		},
+		{
+			"heading": "Variables",
+			"bullets": [
+				"You can declare variables with a dollar sign",
+				"Variables can be used in property values and selectors.  I can only recommend using them in property values."
 			],
 			"code": {
 				"type": "scss",
-				"content": ".redBg {\n   background-color: red;\n   border-radius: 51px;\n   color: white;\n   padding: 5px;\n}"
+				"content": "$border: 1px solid #333333;\n.box {\n   border: $border\n}\n\n/** compiles down to **/\n\n.box {\n   border: 1px solid #333333;\n}"
 			}
 		},
 		{
-			"heading": "blank slide",
-			"bullets": [],
-			"code": {
-				"type": "css",
-				"content": ".thingy {color: #333;}"
-			}
-		},
-		{
-			"heading": "some stuff",
+			"heading": "Nesting",
 			"bullets": [
 
 			],
 			"code": {
-				"type": "javascript",
-				"content": "const thingy = () => {\n   alert('thingy');\n};"
+				"type": "scss",
+				"content": ""
+			}
+		},
+		{
+			"heading": "Sass is modular",
+			"bullets": [
+				"You can create multiple files including partials, which are files that get compiled into the main file.",
+				"Partials begin with an underscore.  For example, _navigation.scss",
+				"Modular code is much easier to maintain.  Finding things you want to change is easy."
+			],
+			"code": {
+				"type": "scss",
+				"content": "/** three files named _normalize.scss, _variables.scss,\n_navigation.scss. **/\n\n@import \"normalize\"\n@import \"variables\"\n@import \"navigation\""
 			}
 		}
 	]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
