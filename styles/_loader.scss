@@ -1,5 +1,3 @@
-//loading animation
-
 .loader {
 	position: fixed;
 	top: 0;
@@ -10,7 +8,7 @@
 	opacity: 1;
 	transition: opacity .5s linear;
 	@extend .flex-center;
-	
+
 	&.fading {
 		opacity: 0;
 	}
@@ -19,6 +17,8 @@
 		display: none;
 	}
 }
+
+/** Loading animation from spinkit, http://tobiasahlin.com/spinkit/ **/
 
 .sk-cube-grid {
   width: 40px;
