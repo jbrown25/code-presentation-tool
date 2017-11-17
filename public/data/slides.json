@@ -100,11 +100,13 @@
 		{
 			"heading": "Mixins",
 			"bullets": [
-
+				"Mixins are sort of like functions",
+				"They’re a way of injecting declarations into a rule-set without inheritance",
+				"You can pass arguments into them that can be used to calculate properties"
 			],
 			"code": {
 				"type": "scss",
-				"content": ""
+				"content": "@mixin pseudo($display: block, $pos: absolute, $content: '') {\n   content: $content;\n   display: $display;\n   position: $pos;\n}\n\n/** Usage **/\n\ndiv::before {\n   @include pseudo;\n   top: -1rem;\n   left: -1rem;\n   width: 1rem;\n   height: 1rem;\n}"
 			}
 		},
 		{
