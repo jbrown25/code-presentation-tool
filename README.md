@@ -1,6 +1,6 @@
 # Justin's Code Presentation Tool
 
-This is a react app I made for a short talk I gave on CSS preprocessors.  It's not very flexible, and is pretty much only good for presenting code.
+This is a react app I made for a short talk I gave on CSS preprocessors.  See it live here: [jbrown25.github.io/slideshow/](https://jbrown25.github.io/slideshow/)  It's not very flexible, and is pretty much only good for presenting code.
 
 ## Making Slides
 
