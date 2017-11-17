@@ -94,7 +94,8 @@ export default class App extends Component {
 							slideIndex={index + 1}
 							totalSlides={totalSlides}
 							onPrev={this.handleOnPrev}
-							onNext={this.handleOnNext} />
+							onNext={this.handleOnNext}
+							key={index} />
 	  		});
 	  	}
 

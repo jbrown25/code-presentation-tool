@@ -89,9 +89,9 @@ export default class Slide extends Component {
 
 		//render bullet list
 		//setting html not dangerous if it's your own content
-		const bulletItems = this.props.slide.bullets.map((bullet) => {
+		const bulletItems = this.props.slide.bullets.map((bullet, index) => {
 			return (
-				<li dangerouslySetInnerHTML={{__html: bullet}}></li>
+				<li dangerouslySetInnerHTML={{__html: bullet}} key={index}></li>
 			);
 		});
 
