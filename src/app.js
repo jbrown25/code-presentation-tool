@@ -99,7 +99,7 @@ export default class App extends Component {
 	  	}
 
     	return (
-	      <div>
+	      <div className="container">
 	      	<Loader />
 	        {getSlides(this.state.currentSlide)}
 	      </div>
