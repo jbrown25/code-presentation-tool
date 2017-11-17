@@ -3,6 +3,7 @@ import Loader from './components/loader';
 import Slide from './components/slide';
 import NextButton from './components/next_button';
 import PreviousButton from './components/previous_button';
+import 'styles/highlight.css';
 import 'styles/index.scss';
 import axios from 'axios';
 
