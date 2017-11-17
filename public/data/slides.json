@@ -70,7 +70,7 @@
 			],
 			"code": {
 				"type": "scss",
-				"content": ".parent {\n   background: transparent;\n   box-shadow: $shadow;\n   .child {\n      font-weight: 700;\n      color: $red;\n   }\n }\n/** compiles down to **/\n.parent {\n   background: transparent;\n   box-shadow: $shadow;\n}\n\n.parent .child {\n   font-weight: 700;\n   color: $red;\n}"
+				"content": ".parent {\n   background: transparent;\n   box-shadow: $shadow;\n   .child {\n      font-weight: 700;\n      color: $red;\n   }\n }\n\n/** compiles down to **/\n\n.parent {\n   background: transparent;\n   box-shadow: $shadow;\n}\n.parent .child {\n   font-weight: 700;\n   color: $red;\n}"
 			}
 		},
 		{
@@ -84,20 +84,49 @@
 				"type": "scss",
 				"content": "/** three files named _normalize.scss, _variables.scss,\n_navigation.scss. **/\n\n@import \"normalize\"\n@import \"variables\"\n@import \"navigation\""
 			}
+		},
+		{
+			"heading": "Inheritance",
+			"bullets": [
+				"Inheritance allows you to extend a rule-set into another",
+				"A rule-set can be a subset of another, and take on all of its property values",
+				"This example is taken directly from the Sass website"
+			],
+			"code": {
+				"type": "scss",
+				"content": ".message {\n   border: 1px solid #ccc;\n   padding: 10px;\n   color: #333;\n}\n\n.success {\n   @extend .message;\n   border-color: green;\n}\n\n.error {\n   @extend .message;\n   border-color: red;\n}\n\n.warning {\n   @extend .message;\n   border-color: yellow;\n\n/** compiles down to **/\n\n.message, .success, .error, .warning {\n   border: 1px solid #cccccc;\n   padding: 10px;\n   color: #333;\n}\n\n.success {\n   border-color: green;\n}\n\n.error {\n   border-color: red;\n}\n\n.warning {\n   border-color: yellow;\n}"
+			}
+		},
+		{
+			"heading": "Mixins",
+			"bullets": [
+
+			],
+			"code": {
+				"type": "scss",
+				"content": ""
+			}
+		},
+		{
+			"heading": "A Few Other Sass Features",
+			"bullets": [
+				"Sass has basic mathematical operators",
+				"You can easily convert between pixels and percentages",
+				"Sass has basic control structures (if/else statements)",
+				"Sass has a <a href=\"http://sass-lang.com/documentation/Sass/Script/Functions.html\" target=\"_blank\">large library</a> of built in functions that you may find useful (I haven't honestly)"
+			],
+			"code": {
+				"type": "scss",
+				"content": ".stuff { height: 100px; }"
+			}
+		},
+		{
+			"heading": "In Conclusion:",
+			"bullets": [
+				"CSS preprocessors have many features, some very useful",
+				"You don't need to learn every feature to improve your CSS writing experience",
+				"I recommend just breaking your code into partials and using using variables to start out with CSS preprocessing"
+			]
 		}
 	]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
