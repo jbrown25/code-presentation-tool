@@ -59,17 +59,18 @@
 			],
 			"code": {
 				"type": "scss",
-				"content": "$border: 1px solid #333333;\n.box {\n   border: $border\n}\n\n/** compiles down to **/\n\n.box {\n   border: 1px solid #333333;\n}"
+				"content": "$border: 1px solid #333333;\n.box {\n   border: $border;\n}\n\n/** compiles down to **/\n\n.box {\n   border: 1px solid #333333;\n}"
 			}
 		},
 		{
 			"heading": "Nesting",
 			"bullets": [
-
+				"Nesting rule-sets gives your code a visual hierarchy",
+				"I find it makes it easier to read and understand at a glance"
 			],
 			"code": {
 				"type": "scss",
-				"content": ""
+				"content": ".parent {\n   background: transparent;\n   box-shadow: $shadow;\n   .child {\n      font-weight: 700;\n      color: $red;\n   }\n }\n/** compiles down to **/\n.parent {\n   background: transparent;\n   box-shadow: $shadow;\n}\n\n.parent .child {\n   font-weight: 700;\n   color: $red;\n}"
 			}
 		},
 		{
