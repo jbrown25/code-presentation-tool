@@ -20,7 +20,7 @@ export default class Loader extends Component {
 	getRandomColor(){
 		const colors = [
 			'#57E557',
-			'#A2E57B',
+			'#9247ad',
 			'#57E5DE',
 			'#EF4C72',
 			'#EFA447'
