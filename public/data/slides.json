@@ -44,7 +44,7 @@
 			]
 		},
 		{
-			"heading": "CSS Preprocessors",
+			"heading": "A Solution: CSS Preprocessors",
 			"bullets": [
 				"A CSS preprocessor is a program that allows you to write code that compiles down to CSS",
 				"Commonly used CSS preprocessors include Sass, LESS, and Stylus.",
@@ -82,7 +82,7 @@
 			],
 			"code": {
 				"type": "scss",
-				"content": "/** three files named _normalize.scss, _variables.scss,\n_navigation.scss. **/\n\n@import \"normalize\"\n@import \"variables\"\n@import \"navigation\""
+				"content": "/** three files named _normalize.scss, _variables.scss,\n_navigation.scss. **/\n\n@import \"normalize\";\n@import \"variables\";\n@import \"navigation\";"
 			}
 		},
 		{
@@ -114,12 +114,21 @@
 			"bullets": [
 				"Sass has basic mathematical operators",
 				"You can easily convert between pixels and percentages",
-				"Sass has basic control structures (if/else statements)",
+				"Sass has basic control directives (if/else statements), lists, and functions",
 				"Sass has a <a href=\"http://sass-lang.com/documentation/Sass/Script/Functions.html\" target=\"_blank\">large library</a> of built in functions that you may find useful (I haven't honestly)"
+			]
+		},
+		{
+			"heading": "Real World Example",
+			"bullets": [
+				"Here's a fairly simple example of a <a href=\"http://office-demo-rsp.azurewebsites.net/\" target=\"_blank\">Website</a> that used Sass",
+				"Many elements are reused, and can be stored as variables",
+				"There are columns of various sizes, and many of their properties can be saved as mixins",
+				"Spaces between different elements are a consistent size.  Operators can be used to recalculate if space is changed"
 			],
 			"code": {
 				"type": "scss",
-				"content": ".stuff { height: 100px; }"
+				"content": "/** Columns use \"column\" mixin, some math operations,\nand a $gutter variable **/\n\n@mixin column-one-third {\n   display: block;\n   position: relative;\n   box-sizing: border-box;\n   flex: 0 0 33.33333%;\n   max-width: 33.33333%\n}\n\n$gutter: 24px;\n\n/** Columns **/\n\n.content-columns {\n   position: relative;\n   display: block;\n   width: 100%\n   vertical-align: top;\n\n   .col-one-third:nth-child(3n + 1){\n      @include column-one-third;\n      padding-right: $gutter * (2/3);\n   }\n\n   .col-one-third:nth-child(3n + 2) {\n      @include column-one-third;\n      padding-left: $gutter * (1/3);\n      padding-right: $gutter * (1/3);\n   }\n\n   .col-one-third:nth-child(3n) {\n      @include column-one-third;\n      padding-left: $gutter * (2/3);\n   }\n}"
 			}
 		},
 		{
