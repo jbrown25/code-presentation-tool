@@ -59,7 +59,7 @@
 			],
 			"code": {
 				"type": "scss",
-				"content": "$border: 1px solid #333333;\n.box {\n   border: $border;\n}\n\n/** compiles down to **/\n\n.box {\n   border: 1px solid #333333;\n}"
+				"content": "$border: 1px solid #333333;\n\n.box {\n   border: $border;\n}\n\n/** compiles down to **/\n\n.box {\n   border: 1px solid #333333;\n}"
 			}
 		},
 		{
@@ -70,7 +70,7 @@
 			],
 			"code": {
 				"type": "scss",
-				"content": ".parent {\n   background: transparent;\n   box-shadow: $shadow;\n   .child {\n      font-weight: 700;\n      color: $red;\n   }\n }\n\n/** compiles down to **/\n\n.parent {\n   background: transparent;\n   box-shadow: $shadow;\n}\n.parent .child {\n   font-weight: 700;\n   color: $red;\n}"
+				"content": ".parent {\n   background: transparent;\n   box-shadow: $shadow;\n\n   .child {\n      font-weight: 700;\n      color: $red;\n   }\n }\n\n/** compiles down to **/\n\n.parent {\n   background: transparent;\n   box-shadow: $shadow;\n}\n\n.parent .child {\n   font-weight: 700;\n   color: $red;\n}"
 			}
 		},
 		{
