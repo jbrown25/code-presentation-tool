@@ -38,16 +38,18 @@ export default class Slide extends Component {
 	}
 
 	componentDidMount(){
-		this.highlightCodeBlocks();
+		if(this.refs.code){
+			hljs.highlightBlock(this.refs.code);
+		}
 	}
 
 	//use highlight.js
-	highlightCodeBlocks(){
+	/*highlightCodeBlocks(){
 		let slideCodes = document.getElementsByTagName('code');
 		for(let i = 0; i < slideCodes.length; i++){
 			hljs.highlightBlock(slideCodes[i]);
 		}	
-	}
+	}*/
 
 	getRandomColor(){
 		const colors = [
@@ -99,7 +101,7 @@ export default class Slide extends Component {
 			if (this.props.slide.code){
 				return (
 					<pre>
-						<code className={this.props.slide.code.type}>
+						<code className={this.props.slide.code.type} ref="code">
 							{this.props.slide.code.content}
 						</code>
 					</pre>
