@@ -43,14 +43,6 @@ export default class Slide extends Component {
 		}
 	}
 
-	//use highlight.js
-	/*highlightCodeBlocks(){
-		let slideCodes = document.getElementsByTagName('code');
-		for(let i = 0; i < slideCodes.length; i++){
-			hljs.highlightBlock(slideCodes[i]);
-		}	
-	}*/
-
 	getRandomColor(){
 		const colors = [
 			'#57E557',
