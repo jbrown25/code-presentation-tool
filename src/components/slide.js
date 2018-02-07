@@ -38,8 +38,8 @@ export default class Slide extends Component {
 	}
 
 	componentDidMount(){
-		if(this.refs.code){
-			hljs.highlightBlock(this.refs.code);
+		if(this.codeSample){
+			hljs.highlightBlock(this.codeSample);
 		}
 	}
 
@@ -93,7 +93,7 @@ export default class Slide extends Component {
 			if (this.props.slide.code){
 				return (
 					<pre>
-						<code className={this.props.slide.code.type} ref="code">
+						<code className={this.props.slide.code.type} ref={(el) => {this.codeSample = el;}}>
 							{this.props.slide.code.content}
 						</code>
 					</pre>
